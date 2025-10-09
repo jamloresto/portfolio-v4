@@ -1,0 +1,202 @@
+@charset "UTF-8";
+:root {
+  /* Default: Winter */
+  --primary: #113f67;
+  --secondary: #2b5783;
+  --background: #fdf5aa;
+  --accent: #58a0c8;
+  --text: #10243a;
+  --muted-text: #435a6e;
+  --border: #cdd7e1;
+  --on-primary: #ffffff;
+  --on-secondary: #ffffff;
+  --on-accent: #0c2333;
+  --on-background: var(--text);
+}
+
+/* ❄️ Winter */
+.winter {
+  --primary: #113f67;
+  --secondary: #2b5783;
+  --background: #fdf5aa;
+  --accent: #58a0c8;
+  --text: #10243a;
+  --muted-text: #435a6e;
+  --border: #cdd7e1;
+  --on-primary: #ffffff;
+  --on-secondary: #ffffff;
+  --on-accent: #0c2333;
+  --on-background: var(--text);
+}
+
+/* 🌸 Spring */
+.spring {
+  --primary: #f2ffe9;
+  --secondary: #a6cf98;
+  --background: #476a47;
+  --accent: #fa7070;
+  --text: #f2ffe9;
+  --muted-text: #d9efd1;
+  --border: #7ea27e;
+  --on-primary: #203321;
+  --on-secondary: #203321;
+  --on-accent: #3a0f0f;
+  --on-background: var(--text);
+}
+
+/* ☀️ Summer */
+.summer {
+  --primary: #ef7722;
+  --secondary: #faa533;
+  --background: #0a86bd;
+  --accent: #ebebeb;
+  --text: #f7f7f7;
+  --muted-text: #dfe8ee;
+  --border: #bcd8e6;
+  --on-primary: #1d1208;
+  --on-secondary: #1c1306;
+  --on-accent: #1d2a33;
+  --on-background: var(--text);
+}
+
+/* 🍂 Fall */
+.fall {
+  --primary: #faf7f0;
+  --secondary: #d8d2c2;
+  --background: #4a4947;
+  --accent: #b17457;
+  --text: #faf7f0;
+  --muted-text: #e7e1d2;
+  --border: #bdb7a8;
+  --on-primary: #2e2d2b;
+  --on-secondary: #2f2e2b;
+  --on-accent: #fff7f2;
+  --on-background: var(--text);
+}
+
+.mono {
+  --primary: #2e2e2e;
+  --secondary: #4a4a4a;
+  --background: #f4f4f4;
+  --accent: #bcbcbc;
+  --text: #1c1c1c;
+  --muted-text: #6b6b6b;
+  --border: #dcdcdc;
+  --on-primary: #ffffff;
+  --on-secondary: #ffffff;
+  --on-accent: #2e2e2e;
+  --on-background: var(--text);
+}
+
+* {
+  outline: none !important;
+  box-sizing: border-box;
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  border-spacing: 0;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-width: 100vw;
+  min-width: 100%;
+  width: 100%;
+}
+
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  height: 100%;
+}
+.container--content {
+  padding: 10px 40px;
+}
+@media screen and (min-width: 1600px) {
+  .container--content {
+    max-width: 1440px;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+  background: var(--accent);
+  color: var(--on-accent);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.button {
+  background: var(--primary);
+  color: var(--on-primary);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.625rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.05s;
+}
+.button:hover {
+  background: var(--secondary);
+  color: var(--on-secondary);
+}
+.button--accent {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.button--accent:hover {
+  filter: brightness(0.95);
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--on-primary);
+  border: 1px solid var(--on-primary);
+  border-radius: 999px;
+  padding: 0.625rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.05s;
+}
+.button-secondary:hover {
+  background: var(--primary);
+}
+.button-secondary--accent {
+  border: 1px solid var(--on-accent);
+  color: var(--on-accent);
+}
+.button-secondary--accent:hover {
+  background: var(--accent);
+}
+
+/*# sourceMappingURL=build.css.map */

@@ -1,0 +1,35 @@
+.button {
+  background: $primary;
+  color: $on-primary;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.625rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.05s;
+
+  &:hover { background: $secondary; color: $on-secondary; }
+
+  &--accent {
+    background: $accent;
+    color: $on-accent;
+    &:hover { filter: brightness(0.95); }
+  }
+}
+
+.button-secondary {
+  background: transparent;
+  color: $on-primary;
+  border: 1px solid $on-primary;
+  border-radius: 999px;
+  padding: 0.625rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.05s;
+
+  &:hover { background: $primary; }
+
+  &--accent {
+    border: 1px solid $on-accent;
+    color: $on-accent;
+    &:hover { background: $accent; }
+  }
+}
