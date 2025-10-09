@@ -1,0 +1,118 @@
+//container max width
+$max_width: 1440;
+
+//colors
+:root {
+  /* Default: Winter */
+  --primary: #113f67;
+  --secondary: #2b5783;
+  --background: #fdf5aa;
+  --accent: #58a0c8;
+
+  --text: #10243a;
+  --muted-text: #435a6e;
+  --border: #cdd7e1;
+
+  --on-primary: #ffffff;
+  --on-secondary: #ffffff;
+  --on-accent: #0c2333;
+  --on-background: var(--text);
+}
+
+/* ❄️ Winter */
+.winter {
+  --primary: #113f67;
+  --secondary: #2b5783;
+  --background: #fdf5aa;
+  --accent: #58a0c8;
+
+  --text: #10243a;
+  --muted-text: #435a6e;
+  --border: #cdd7e1;
+
+  --on-primary: #ffffff;
+  --on-secondary: #ffffff;
+  --on-accent: #0c2333;
+  --on-background: var(--text);
+}
+
+/* 🌸 Spring */
+.spring {
+  --primary: #f2ffe9;
+  --secondary: #a6cf98;
+  --background: #476a47;
+  --accent: #fa7070;
+
+  --text: #f2ffe9;
+  --muted-text: #d9efd1;
+  --border: #7ea27e;
+
+  --on-primary: #203321;
+  --on-secondary: #203321;
+  --on-accent: #3a0f0f;
+  --on-background: var(--text);
+}
+
+/* ☀️ Summer */
+.summer {
+  --primary: #ef7722;
+  --secondary: #faa533;
+  --background: #0a86bd;
+  --accent: #ebebeb;
+
+  --text: #f7f7f7;
+  --muted-text: #dfe8ee;
+  --border: #bcd8e6;
+
+  --on-primary: #1d1208;
+  --on-secondary: #1c1306;
+  --on-accent: #1d2a33;
+  --on-background: var(--text);
+}
+
+/* 🍂 Fall */
+.fall {
+  --primary: #faf7f0;
+  --secondary: #d8d2c2;
+  --background: #4a4947;
+  --accent: #b17457;
+
+  --text: #faf7f0;
+  --muted-text: #e7e1d2;
+  --border: #bdb7a8;
+
+  --on-primary: #2e2d2b;
+  --on-secondary: #2f2e2b;
+  --on-accent: #fff7f2;
+  --on-background: var(--text);
+}
+
+.mono {
+  --primary: #2e2e2e;
+  --secondary: #4a4a4a;
+  --background: #f4f4f4;
+  --accent: #bcbcbc;
+
+  --text: #1c1c1c;
+  --muted-text: #6b6b6b;
+  --border: #dcdcdc;
+
+  --on-primary: #ffffff;
+  --on-secondary: #ffffff;
+  --on-accent: #2e2e2e;
+  --on-background: var(--text);
+}
+
+$primary: var(--primary);
+$secondary: var(--secondary);
+$background: var(--background);
+$accent: var(--accent);
+
+$text: var(--text);
+$muted-text: var(--muted-text);
+$border: var(--border);
+
+$on-primary: var(--on-primary);
+$on-secondary: var(--on-secondary);
+$on-accent: var(--on-accent);
+$on-background: var(--on-background);

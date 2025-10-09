@@ -1,0 +1,70 @@
+* {
+	outline: none !important;
+	box-sizing: border-box;
+	background: none repeat scroll 0 0 transparent;
+	border: medium none;
+	border-spacing: 0;
+	font-size: em(16);
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	text-decoration: none;
+	text-indent: 0;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	max-width: 100vw;
+	min-width: 100%;
+	width: 100%;
+}
+
+body {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+// utilities
+.container {
+	margin: 0 auto;
+	height: 100%;
+
+	&--content {
+		padding: 10px 40px;
+
+		@include breakpoint($point: desktopXL, $breakMax: false) {
+			max-width: 1440px;
+		}
+	}
+}
+
+body {
+  background: $background;
+  color: $text;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+  background: $accent;
+  color: $on-accent;
+  border: 1px solid $border;
+  border-radius: 12px;
+  padding: 1rem;
+}

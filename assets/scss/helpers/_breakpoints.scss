@@ -1,0 +1,127 @@
+$mobile: 100px;
+$mobileLandscape: 480px;
+$tablet: 720px;
+$tabletLandscape: 1024px;
+$laptop: 1366px;
+$desktop: 1440px;
+$desktopXL: 1600px;
+$desktopWide: 2000px;
+$desktopExtraWide: 3000px;
+
+@mixin breakpoint($point, $breakMax: false) {
+	@if ($breakMax==false) {
+		@if ($point==mobile) {
+			@media screen and (min-width: $mobile) {
+				@content;
+			}
+		}
+
+		@if ($point==tablet) {
+			@media screen and (min-width: $tablet) {
+				@content;
+			}
+		}
+
+		@if ($point==tabletLandscape) {
+			@media screen and (min-width: $tabletLandscape) {
+				@content;
+			}
+		}
+
+		@if ($point==laptop) {
+			@media screen and (min-width: $laptop) {
+				@content;
+			}
+		}
+
+		@if ($point==desktop) {
+			@media screen and (min-width: $desktop) {
+				@content;
+			}
+		}
+
+		@if ($point==desktopXL) {
+			@media screen and (min-width: $desktopXL) {
+				@content;
+			}
+		}
+
+		@if ($point==desktopWide) {
+			@media screen and (min-width: $desktopWide) {
+				@content;
+			}
+		}
+
+		@if ($point==desktopExtraWide) {
+			@media screen and (min-width: $desktopExtraWide) {
+				@content;
+			}
+		}
+	} @else {
+		@if ($point==mobile) {
+			@media screen and (min-width: $mobile) and (max-width:  #{($tablet - 1)}) {
+				@content;
+			}
+		}
+
+		@if ($point==tablet) {
+			@media screen and (min-width: $tablet) and (max-width: 991px) {
+				@content;
+			}
+		}
+
+		@if ($point==mobileLandscape) {
+			@media screen and (min-width: $mobile) and (max-width: 767px) {
+				@content;
+			}
+		}
+
+		@if ($point==mobiletab) {
+			@media screen and (min-width: $mobile) and (max-width: #{($tabletLandscape - 1)}) {
+				@content;
+			}
+		}
+
+		@if ($point==customTablet) {
+			@media screen and (min-width: 768px) and (max-width: 1280px) {
+				@content;
+			}
+		}
+
+		@if ($point==tabletLandscape) {
+			@media screen and (min-width: $tabletLandscape) and (max-width: #{($laptop - 1)}) {
+				@content;
+			}
+		}
+
+		@if ($point==laptop) {
+			@media screen and (min-width: $laptop) and (max-width: #{($desktop - 1)}) {
+				@content;
+			}
+		}
+
+		@if ($point==desktop) {
+			@media screen and (min-width: $desktop) and (max-width: #{($desktopXL - 1)}) {
+				@content;
+			}
+		}
+
+		@if ($point==desktopXL) {
+			@media screen and (min-width: $desktopXL) and (max-width: #{($desktopWide - 1)}) {
+				@content;
+			}
+		}
+
+		@if ($point==desktopWide) {
+			@media screen and (min-width: $desktopWide) and (max-width: #{($desktopExtraWide - 1)}) {
+				@content;
+			}
+		}
+
+		@if ($point==desktopExtraWide) {
+			@media screen and (min-width: $desktopExtraWide) {
+				@content;
+			}
+		}
+	}
+}
