@@ -22,6 +22,10 @@
 		<div id="smooth-wrapper">
 			<div id="smooth-content">
 				<?php include 'assets/components/navigation.php'; ?>
+				<section id="home" style="min-height:60vh; padding:2rem 0"><h1>Home</h1></section>
+				<section id="skill" style="min-height:60vh; padding:2rem 0"><h1>Skill</h1></section>
+				<section id="works" style="min-height:60vh; padding:2rem 0"><h1>Works</h1></section>
+				<section id="contact" style="min-height:60vh; padding:2rem 0"><h1>Contact</h1></section>
 			</div>
 		</div>
 	</main>
@@ -37,6 +41,7 @@
 	<script src="/assets/js/custom/app.js"></script>
 	<script src="/assets/js/custom/global.js"></script>
 	<script src="/assets/js/custom/script.js"></script>
+	<script src="/assets/js/custom/theme.js"></script>
 	<script src="/assets/js/custom/animation.js"></script>
 
 </body>
