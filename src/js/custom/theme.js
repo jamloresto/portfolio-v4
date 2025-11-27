@@ -4,7 +4,7 @@
 	var Theme = function () {};
 
 	Theme.prototype.init = function () {
-		Theme.prototype.changeTheme();
+		this.changeTheme();
 	};
 
 	Theme.prototype.changeTheme = function () {
@@ -25,12 +25,11 @@
 		// theme controls (legacy select + new icon row)
 		const select = document.getElementById("theme-select");
 		const bar = document.getElementById("theme-selector");
-		const iconBase = (bar?.dataset?.iconPath || "/assets/images/theme-icons").replace(
-			/\/+$/,
-			""
-		);
+		const iconBase = (
+			bar?.dataset?.iconPath || "/src/images/theme-icons"
+		).replace(/\/+$/, "");
 
-		// ----- Logo bits (NEW)
+		// ----- Logo bits
 		const logoEl = document.getElementById("brand-logo");
 		const LOGO_MAP = {
 			winter: "jam-winter.png",
@@ -39,10 +38,12 @@
 			fall: "jam-fall.png",
 			mono: "jam-mono.png",
 		};
-		const DARK_THEMES = new Set(["summer", "fall"]);
+
+		// Themes considered "dark background" for logo styling
+		const DARK_THEMES = new Set(["summer", "fall", "mono"]);
 
 		const getLogoUrl = (theme) => {
-			const base = (logoEl?.dataset?.logoBase || "/assets/images/logos").replace(
+			const base = (logoEl?.dataset?.logoBase || "/src/images/logos").replace(
 				/\/+$/,
 				""
 			);
@@ -64,7 +65,7 @@
 			logoEl.onerror = onError;
 			logoEl.src = url;
 
-			// Optional CSS hook for dark backgrounds
+			// CSS hook for dark themes (purely for styling the logo)
 			logoEl.classList.toggle("logo--on-dark", DARK_THEMES.has(theme));
 		};
 
@@ -167,6 +168,7 @@
 
 	app.onLoad(function () {
 		console.log("Theme Load");
-		Theme.prototype.init();
+		const theme = new Theme();
+		theme.init();
 	});
 })(window.App);
