@@ -19,21 +19,21 @@
 	<title>Jam Hernandez | Portfolio</title>
 	<meta name="title" content="Jam Hernandez | Portfolio" />
 	<meta name="description" content="A front-end developer, full-stack problem solver, and web designer who loves turning ideas into smooth, intuitive, and meaningful digital experiences." />
-	<meta name="image" content="https://jamloresto.com/src/images/misc/jam.jpg" />
+	<meta name="image" content="https://jamloresto.com/meta.jpg" />
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://jamloresto.com/" />
 	<meta property="og:title" content="Jam Hernandez | Portfolio" />
 	<meta property="og:description" content="A front-end developer, full-stack problem solver, and web designer who loves turning ideas into smooth, intuitive, and meaningful digital experiences." />
-	<meta property="og:image" content="https://jamloresto.com/src/images/misc/jam.jpg" />
+	<meta property="og:image" content="https://jamloresto.com/meta.jpg" />
 
 	<!-- X (Twitter) -->
 	<meta property="twitter:card" content="summary_large_image" />
 	<meta property="twitter:url" content="https://jamloresto.com/" />
 	<meta property="twitter:title" content="Jam Hernandez | Portfolio" />
 	<meta property="twitter:description" content="A front-end developer, full-stack problem solver, and web designer who loves turning ideas into smooth, intuitive, and meaningful digital experiences." />
-	<meta property="twitter:image" content="https://jamloresto.com/src/images/misc/jam.jpg" />
+	<meta property="twitter:image" content="https://jamloresto.com/meta.jpg" />
 	
 	<link rel="stylesheet" href="./src/styles/output.css">
 
