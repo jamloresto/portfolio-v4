@@ -13,14 +13,14 @@
     >
       <!-- fade from right (image) to left (solid bg) -->
       <div
-        class="hidden md:block h-full w-full bg-linear-to-l from-on-primary/0 via-on-primary/25 to-on-primary"
+        class="block h-full w-full bg-linear-to-l from-on-primary/0 via-on-primary/25 to-on-primary"
       ></div>
     </div>
   </div>
 
   <!-- Content -->
   <div
-    class="relative z-10 py-16 mt-auto mr-auto flex max-w-6xl flex-col gap-12 px-6 lg:flex-row lg:items-center lg:gap-20 transition-fade"
+    class="relative z-10 py-16 mt-auto mr-auto flex max-w-6xl flex-col gap-12 px-6 lg:flex-row lg:items-center lg:gap-20 transition-fade rounded-lg"
   >
     <!-- children of this div will stagger in from bottom -->
     <div
@@ -43,7 +43,7 @@
       </h1>
 
       <p
-        class="mt-6 max-w-xl text-base leading-relaxed text-muted lg:text-lg transition-bottom"
+        class="font-medium mt-4 md:mt-6 max-w-xl text-base leading-relaxed text-text lg:text-lg transition-bottom bg-linear-to-r from-on-primary/0 via-on-primary/10 to-on-primary/40 p-4 rounded-lg md:bg-none md:p-0"
       >
         A front-end developer, full-stack problem solver, and web designer who
         loves turning ideas into smooth, intuitive, and meaningful digital

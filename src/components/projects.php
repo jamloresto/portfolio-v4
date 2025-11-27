@@ -86,7 +86,7 @@ $projects = [
           class="group grid gap-8 rounded-2xl border border-border/40 bg-primary/5 px-6 py-6 md:grid-cols-2 md:px-8 md:py-8 transition-all hover:-translate-y-1 hover:border-accent/80 hover:shadow-lg transition-bottom"
         >
           <!-- Text column -->
-          <div class="order-2 md:<?php echo $isEven ? 'order-1' : 'order-2'; ?> flex flex-col justify-start gap-2">
+          <div class="<?php echo $isEven ? 'order-1' : 'order-2'; ?> flex flex-col justify-start gap-2">
             <header class="mb-4">
               <h3 class="font-display text-2xl md:text-3xl text-text">
                 <?php echo htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8'); ?>
@@ -125,7 +125,7 @@ $projects = [
           </div>
 
           <!-- Image / placeholder column -->
-          <div class="order-1 md:<?php echo $isEven ? 'order-2' : 'order-1'; ?> flex items-center justify-center">
+          <div class="<?php echo $isEven ? 'order-2' : 'order-1'; ?> flex items-center justify-center">
             <?php if ($hasImage): ?>
               <figure class="w-full max-w-md overflow-hidden transition-scale">
                 <img
