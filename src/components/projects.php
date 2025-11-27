@@ -23,28 +23,28 @@ $projects = [
   ],
   [
     'title' => 'Converter',
-    'description' => 'First personal project app using Flutter made from scratch. The app is for the common unit convertions. It composes of one screen as selection screen, and a reusable screen as the converter screen.',
+    'description' => '<ul><li>First personal project app using Flutter made from scratch. The app is for the common unit convertions.</li><li>Composes of one screen as selection screen, and a reusable screen as the converter screen.</li></ul>',
     'tools' => ['Flutter'],
     'link' => '',
     'image' => '/src/images/projects/converter.png',
   ],
   [
     'title' => 'AU-based Car Sharing App',
-    'description' => "<i>As the nature of this work is confidential, there won't be any visuals to show for the time being. However, a description of the work done may be provided.</i><br/><br/><ul><li>One of the developers who worked on the front-end of the Web App and Admin/CMS of the new app deployed last March 2023.</li><li>Developed reusable React components, optimized UI performance, and improved responsiveness.</li><li>Updated booking interfaces, registration interfaces, enhanced interactive elements, and integrated API-driven content.</li><li>Collaborated with backend and mobile teams to ensure consistent cross-platform behavior.</li></ul>",
+    'description' => "<p class='block md:hidden italic pb-2'>As the nature of this work is confidential, there won't be any visuals to show for the time being. However, a description of the work done may be provided.</p><ul><li>One of the developers who worked on the front-end of the Web App and Admin/CMS of the new app deployed last March 2023.</li><li>Developed reusable React components, optimized UI performance, and improved responsiveness.</li><li>Updated booking interfaces, registration interfaces, enhanced interactive elements, and integrated API-driven content.</li><li>Collaborated with backend and mobile teams to ensure consistent cross-platform behavior.</li></ul>",
     'tools' => ['ReactJS', 'Typescript', 'Redux-Saga', 'Firestore', 'Tailwind CSS', 'SASS', 'REST APIs'],
     'link' => '',
     'image' => '',
   ],
   [
     'title' => 'AU-based Digital Warranty & Claims Platform',
-    'description' => "<i>As the nature of this work is confidential, there won't be any visuals to show for the time being. However, a description of the work done may be provided.</i><br/><br/><ul><li>Migrated the entire platform from Vue 2 to Vue 3, updating packages and dependencies for full compatibility.</li><li>Rebuilt and optimized UI components using Vue 3 + TailwindCSS, improving performance and maintainability.</li><li>Refactored legacy code to the Composition API and modern Vue structure.</li><li>Implemented the platform&apos;s new rebranding by converting Figma designs into clean, responsive layouts.</li><li>Performed regression testing to ensure key features remained stable after migration.</li></ul>",
+    'description' => "<p class='block md:hidden italic pb-2'>As the nature of this work is confidential, there won't be any visuals to show for the time being. However, a description of the work done may be provided.</p><ul><li>Migrated the entire platform from Vue 2 to Vue 3, updating packages and dependencies for full compatibility.</li><li>Rebuilt and optimized UI components using Vue 3 + TailwindCSS, improving performance and maintainability.</li><li>Refactored legacy code to the Composition API and modern Vue structure.</li><li>Implemented the platform&apos;s new rebranding by converting Figma designs into clean, responsive layouts.</li><li>Performed regression testing to ensure key features remained stable after migration.</li></ul>",
     'tools' => ['Vue 3', 'JavaScript', 'Tailwind CSS', 'XState', 'Material UI'],
     'link' => '',
     'image' => '',
   ],
   [
     'title' => 'AU-based Clients Custom Theme WordPress Websites',
-    'description' => "<i>As the nature of this work is confidential, there won't be any visuals to show for the time being. However, a description of the work done may be provided.</i><br/><br/><ul><li>Built custom UI sections and animations, ensuring consistent branding and smooth user experience.</li><li>Implemented SASS-based styling, optimized layouts, and improved page responsiveness across devices.</li><li>Enhanced performance through asset optimization, reusable components, and mobile usability improvements.</li><li>Integrated SEO-friendly structures and assisted with bug fixes and front-end performance tuning.</li></ul>",
+    'description' => "<p class='block md:hidden italic pb-2'>As the nature of this work is confidential, there won't be any visuals to show for the time being. However, a description of the work done may be provided.</p><ul><li>Built custom UI sections and animations, ensuring consistent branding and smooth user experience.</li><li>Implemented SASS-based styling, optimized layouts, and improved page responsiveness across devices.</li><li>Enhanced performance through asset optimization, reusable components, and mobile usability improvements.</li><li>Integrated SEO-friendly structures and assisted with bug fixes and front-end performance tuning.</li></ul>",
     'tools' => ['Wordpress', 'Custom Theme', 'TailwindCSS', 'Photoshop'],
     'link' => '',
     'image' => '',
@@ -86,14 +86,14 @@ $projects = [
           class="group grid gap-8 rounded-2xl border border-border/40 bg-primary/5 px-6 py-6 md:grid-cols-2 md:px-8 md:py-8 transition-all hover:-translate-y-1 hover:border-accent/80 hover:shadow-lg transition-bottom"
         >
           <!-- Text column -->
-          <div class="<?php echo $isEven ? 'order-1' : 'order-2'; ?> flex flex-col justify-between">
+          <div class="order-2 md:<?php echo $isEven ? 'order-1' : 'order-2'; ?> flex flex-col justify-start gap-2">
             <header class="mb-4">
               <h3 class="font-display text-2xl md:text-3xl text-text">
                 <?php echo htmlspecialchars($project['title'], ENT_QUOTES, 'UTF-8'); ?>
               </h3>
             </header>
 
-            <div class="prose prose-sm max-w-none text-muted prose-ul:list-disc prose-li:marker:text-accent prose-a:text-accent">
+            <div class="text-sm md:text-md prose prose-sm max-w-none text-muted [&>ul]:list-disc [&>li]:marker:text-accent [&>a]:text-accent [&>ul]:pl-8">
               <?php echo $project['description']; ?>
             </div>
 
@@ -135,7 +135,7 @@ $projects = [
                 />
               </figure>
             <?php else: ?>
-              <div class="flex h-full min-h-[180px] w-full max-w-md items-center justify-center px-6 text-center text-xs md:text-sm text-muted">
+              <div class="hidden md:flex h-full min-h-[180px] w-full max-w-md items-center justify-center px-6 text-center text-xs md:text-sm text-muted">
                 <p>
                   Visuals for this project are confidential, but I&apos;m happy to share more
                   about the work, responsibilities, and outcomes upon request.

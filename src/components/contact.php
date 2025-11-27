@@ -124,8 +124,11 @@
     </div>
 
     <!-- Footer note -->
-    <p class="mt-16 text-center text-xs text-on-primary/70 transition-fade">
+    <p class="mt-16 text-center text-xs text-on-primary/70">
       Built using PHP, TailwindCSS, GSAP, and JavaScript.
+    </p>
+    <p class="mt-2 text-center text-xs text-on-primary/70">
+      JESSA MAE HERNANDEZ | 2025
     </p>
   </div>
 </section>

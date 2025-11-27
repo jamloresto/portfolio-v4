@@ -85,6 +85,7 @@
 	Global.prototype.init = function () {
 		Global.prototype.reloadOnPageResize();
 		Global.prototype.handleHeaderNavScroll();
+		Global.prototype.handleAnchorSmoothScroll();
 	};
 
 	Global.prototype.reloadOnPageResize = function () {
@@ -198,6 +199,52 @@
 				$(".header-wrapper__inner").addClass("match-bg--desktop");
 			}
 		}
+
+		Global.prototype.handleAnchorSmoothScroll = function () {
+			const header = document.querySelector(".header-wrapper");
+			const headerHeight = header ? header.offsetHeight : 100;
+
+			// All in-page anchor links
+			document.querySelectorAll('a[href^="#"]').forEach((link) => {
+				const href = link.getAttribute("href");
+				// skip empty or just "#"
+				if (!href || href === "#") return;
+
+				link.addEventListener("click", (e) => {
+					const target = document.querySelector(href);
+					if (!target) return;
+
+					e.preventDefault();
+
+					// If you have a mobile nav toggle, close it here
+					const toggle = document.querySelector(".header__menu-toggle");
+					const menu = document.querySelector("#primary-menu");
+					if (toggle && menu && menu.classList.contains("is-open")) {
+						toggle.classList.remove("active");
+						toggle.setAttribute("aria-expanded", "false");
+						menu.classList.remove("is-open");
+					}
+
+					// Base Y position of the section in the document
+					const targetY =
+						target.getBoundingClientRect().top +
+						window.scrollY + 16;
+
+					// If ScrollSmoother exists, use it
+					const smoother = window.App && window.App.smoother;
+					if (smoother) {
+						smoother.scrollTo(targetY, true); // true = animate
+					} else {
+						// fallback: normal window scroll
+						gsap.to(window, {
+							duration: 0.8,
+							scrollTo: targetY,
+							ease: Power2.easeOut,
+						});
+					}
+				});
+			});
+		};
 	};
 
 	app.Global = Global;
