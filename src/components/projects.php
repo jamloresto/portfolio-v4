@@ -125,7 +125,7 @@ $projects = [
           </div>
 
           <!-- Image / placeholder column -->
-          <div class="<?php echo $isEven ? 'order-2' : 'order-1'; ?> flex items-center justify-center">
+          <div class="order-1 md:<?php echo $isEven ? 'order-2' : 'order-1'; ?> flex items-center justify-center">
             <?php if ($hasImage): ?>
               <figure class="w-full max-w-md overflow-hidden transition-scale">
                 <img

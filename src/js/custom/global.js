@@ -118,9 +118,37 @@
 	Global.prototype.handleHeaderNavScroll = function () {
 		const headerContainer = ".header-wrapper";
 		const headerContainerInner = $(".header-wrapper__inner");
-		const headerMenuToggle = $(".header__menu-toggle");
-
 		const headerHeight = $(".header-wrapper").innerHeight();
+
+		const headerMenuToggle = $(".header__menu-toggle");
+		const headerMenu = $("#primary-menu");
+
+		headerMenuToggle.on("click", function () {
+			const $btn = $(this);
+			const isActive = $btn.hasClass("active");
+
+			if (isActive) {
+				// Close menu
+				$btn.removeClass("active").attr("aria-expanded", "false");
+				headerMenu.removeClass("mobile-menu-open").addClass("hidden");
+				$("body").removeClass("overflow-hidden");
+			} else {
+				// Open menu
+				$btn.addClass("active").attr("aria-expanded", "true");
+				headerMenu.addClass("mobile-menu-open").removeClass("hidden");
+				$("body").addClass("overflow-hidden");
+			}
+		});
+
+		// Close button INSIDE mobile menu
+		$(".mobile-close-btn").on("click", function () {
+			const toggle = $(".header__menu-toggle");
+			const menu = $("#primary-menu");
+
+			toggle.removeClass("active").attr("aria-expanded", "false");
+			menu.removeClass("mobile-menu-open").addClass("hidden");
+			$("body").removeClass("overflow-hidden");
+		});
 
 		if ($(".container--no-hero").length) {
 			headerBgMatch();
@@ -219,16 +247,21 @@
 					// If you have a mobile nav toggle, close it here
 					const toggle = document.querySelector(".header__menu-toggle");
 					const menu = document.querySelector("#primary-menu");
-					if (toggle && menu && menu.classList.contains("is-open")) {
+					if (toggle && menu && menu.classList.contains("mobile-menu-open")) {
+						// Close mobile menu when a link is clicked
 						toggle.classList.remove("active");
 						toggle.setAttribute("aria-expanded", "false");
-						menu.classList.remove("is-open");
+						menu.classList.remove("mobile-menu-open");
+						menu.classList.add("hidden");
+						document.body.classList.remove("overflow-hidden");
 					}
 
 					// Base Y position of the section in the document
 					const targetY =
 						target.getBoundingClientRect().top +
-						window.scrollY + 16;
+						window.scrollY -
+						headerHeight +
+						16;
 
 					// If ScrollSmoother exists, use it
 					const smoother = window.App && window.App.smoother;
