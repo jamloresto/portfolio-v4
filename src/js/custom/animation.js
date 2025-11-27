@@ -40,6 +40,7 @@
 		animatedCounter();
 		animatedScale();
 		animatedFadeStagger();
+		animatedPuzzleConnect();
 
 		function animatedFade() {
 			const fadedElements = gsap.utils.toArray(".transition-fade");
@@ -179,6 +180,43 @@
 					},
 				});
 			});
+		}
+
+		function animatedPuzzleConnect() {
+			const block = document.querySelector(".puzzle-connect");
+			if (!block || typeof gsap === "undefined") return;
+
+			const left = block.querySelector(".puzzle-left");
+			const right = block.querySelector(".puzzle-right");
+			const heading = block.parentElement.querySelector(".connect-heading");
+
+			if (!left || !right || !heading) return;
+
+			// starting states
+			gsap.set(left, { x: -100, autoAlpha: 1 });
+			gsap.set(right, { x: 100, autoAlpha: 1 });
+			gsap.set(heading, { autoAlpha: 0, y: 20 });
+
+			const tl = gsap.timeline({
+				scrollTrigger: {
+					trigger: block,
+					start: "top 80%",
+					end: "top 10%",
+					scrub: false,
+				},
+				defaults: { ease: Power2.easeOut },
+			});
+
+			tl.to(left, { x: 12 }, 0) // slide in from left
+				.to(right, { x: -12 }, 0) // slide in from right
+				// little "click" when they meet
+				.to(
+					[left, right],
+					{ scale: 1.05, duration: 5.5, yoyo: true, repeat: 1 },
+					0.5
+				)
+				// reveal heading after connection
+				.to(heading, { autoAlpha: 1, y: 0 }, 0.8);
 		}
 	};
 

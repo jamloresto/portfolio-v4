@@ -30,7 +30,7 @@
 				<?php include 'src/components/about.php'; ?>
 				<?php include 'src/components/skills.php'; ?>
 				<?php include 'src/components/projects.php'; ?>
-				<section id="contact" style="min-height:60vh; padding:2rem 0"><h1>Contact</h1></section>
+				<?php include 'src/components/contact.php'; ?>
 			</div>
 		</div>
 	</main>
