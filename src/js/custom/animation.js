@@ -40,7 +40,6 @@
 		animatedCounter();
 		animatedScale();
 		animatedFadeStagger();
-		// animatedGlitch();
 
 		function animatedFade() {
 			const fadedElements = gsap.utils.toArray(".transition-fade");
@@ -181,57 +180,6 @@
 				});
 			});
 		}
-
-	// 	function animatedGlitch() {
-	// 		const title = document.querySelector(".hero__title");
-	// 		if (!title) return;
-
-	// 		const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-	// 		if (reduce.matches) return;
-
-	// 		// Clone text layers for RGB displacement
-	// 		const mainText = title.textContent.trim();
-	// 		title.innerHTML = `
-	// 	<span class="txt">${mainText}</span>
-	// 	<span aria-hidden="true" class="layer layer--magenta">${mainText}</span>
-	// 	<span aria-hidden="true" class="layer layer--yellow">${mainText}</span>
-	// `;
-
-	// 		const mag = title.querySelector(".layer--magenta");
-	// 		const yel = title.querySelector(".layer--yellow");
-
-	// 		let tl;
-	// 		const jitter = () => gsap.utils.random(-4, 4);
-	// 		const skew = () => gsap.utils.random(-2, 2);
-
-	// 		title.addEventListener("mouseenter", () => {
-	// 			if (tl) tl.kill();
-
-	// 			title.classList.add("is-glitching");
-	// 			tl = gsap.timeline({
-	// 				defaults: { duration: 0.06, ease: "steps(2)" },
-	// 				onComplete: () => title.classList.remove("is-glitching"),
-	// 			});
-
-	// 			for (let i = 0; i < 20; i++) {
-	// 				tl.to(mag, { x: jitter(), y: jitter(), opacity: 0.85 }, i * 0.06)
-	// 					.to(yel, { x: jitter(), y: jitter(), opacity: 0.85 }, i * 0.06)
-	// 					.to(
-	// 						title,
-	// 						{ skewX: skew(), x: gsap.utils.random(-1, 1) },
-	// 						i * 0.06
-	// 					);
-	// 			}
-
-	// 			tl.to([mag, yel], { x: 0, y: 0, opacity: 0, duration: 0.04 });
-	// 		});
-
-	// 		title.addEventListener("mouseleave", () => {
-	// 			if (tl) tl.kill();
-	// 			gsap.set([mag, yel, title], { clearProps: "all" });
-	// 			title.classList.remove("is-glitching");
-	// 		});
-	// 	}
 	};
 
 	app.Animation = Animation;

@@ -27,7 +27,7 @@
 			<div id="smooth-content">
 				<?php include 'src/components/navigation.php'; ?>
 				<?php include 'src/components/hero.php'; ?>
-				<section id="home" style="min-height:60vh; padding:2rem 0"><h1>About</h1></section>
+				<?php include 'src/components/about.php'; ?>
 				<section id="skill" style="min-height:60vh; padding:2rem 0"><h1>Skill</h1></section>
 				<section id="works" style="min-height:60vh; padding:2rem 0"><h1>Works</h1></section>
 				<section id="contact" style="min-height:60vh; padding:2rem 0"><h1>Contact</h1></section>
