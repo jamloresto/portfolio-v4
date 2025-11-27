@@ -19,6 +19,7 @@
 	<title>Jam Hernandez | Portfolio</title>
 	<meta name="title" content="Jam Hernandez | Portfolio" />
 	<meta name="description" content="A front-end developer, full-stack problem solver, and web designer who loves turning ideas into smooth, intuitive, and meaningful digital experiences." />
+	<meta name="image" content="https://jamloresto.com/src/images/misc/jam.jpg" />
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
