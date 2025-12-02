@@ -5,11 +5,11 @@
 >
   <!-- Background image -->
   <div
-    class="pointer-events-none absolute inset-0 opacity-40 md:inset-y-0 ml-auto md:right-0 md:w-2/3 md:opacity-100 transition-right"
+    class="pointer-events-none absolute inset-0 opacity-40 md:inset-y-0 ml-auto md:right-0 md:w-full md:opacity-100 transition-right"
     aria-hidden="true"
   >
     <div
-      class="h-full w-full bg-[url('/src/images/misc/jam.jpg')] bg-cover bg-center md:bg-right"
+      class="h-full w-full bg-[url('/src/images/misc/jam.jpg')] bg-cover bg-center"
     >
       <!-- fade from right (image) to left (solid bg) -->
       <div
@@ -57,7 +57,7 @@
           href="#projects"
           class="rounded-lg bg-primary px-6 py-3 text-on-primary shadow-md transition hover:bg-secondary"
         >
-          View My Work
+          View My Works
         </a>
 
         <a
