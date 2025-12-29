@@ -9,8 +9,8 @@ $projects = [
   ],
   [
     'title' => 'iKnow Academic Hub Web Application',
-    'description' => "<ul><li>Served as Lead Developer, building a custom LMS using React.js, TypeScript, Tailwind, and GSAP for smooth user experience and responsive UI.</li><li>Developed major LMS features including quizzes, timers, scoring, session tracking, learning modules, dashboards, and video lessons.</li><li>Integrated and optimized REST APIs (Node.js + MySQL), improving performance through pagination, reduced payloads, and component refactoring.</li><li>Led a junior developer, managing Git workflow, documentation, and deployment setup for scalable long-term maintenance.</li></ul>",
-    'tools' => ['React.js', 'TypeScript', 'Tailwind CSS', 'GSAP', 'Node.js', 'MySQL', 'REST APIs', 'Git', 'Vite', 'Web Socket'],
+    'description' => "<ul><li>Served as Lead Developer, building a custom LMS using React.js, TypeScript, Tailwind, and GSAP for smooth user experience and responsive UI.</li><li>Developed major LMS features including quizzes, timers, scoring, session tracking, learning modules, dashboards, and video lessons.</li><li>Integrated and optimized REST APIs (Node.js + MySQL), improving performance through pagination, reduced payloads, and component refactoring.</li><li>Led a junior developer, managing Git workflow, documentation, and deployment setup for scalable long-term maintenance.</li><li>Implemented OpenAPI-driven development with automated TypeScript client generation, ensuring type-safe frontend integration and reducing API drift across releases.</li></ul>",
+    'tools' => ['React.js', 'TypeScript', 'Tailwind', 'GSAP', 'Node.js', 'MySQL', 'REST APIs', 'OpenAPI 3.0', 'Swagger UI', 'openapi-ts', 'JWT Auth', 'Web Socket', 'Git', 'Vite'],
     'link' => 'https://study.iknowacademichub.com',
     'image' => '/src/images/projects/iknow-app.png',
   ],

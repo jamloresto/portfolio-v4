@@ -121,6 +121,12 @@
                 Node.js, Express.js, MySQL, MongoDB, MERN stack
               </span>
             </p>
+            <p class="mt-2 text-sm text-muted">
+              Focus:
+              <span class="font-medium text-text">
+                API design, data modeling, and frontend-backend integration
+              </span>
+            </p>
           </div>
         </div>
 
@@ -225,9 +231,22 @@
               <span class="font-medium text-text">
                 great digital experiences should feel natural.
               </span>
-              Whether I&apos;m designing a landing page, coding a full-stack feature, or 
-              optimizing a WordPress site, I approach every project with curiosity, care,
-              and a mindset of continuous improvement.
+            </p>
+            <p
+              class="mt-3 text-sm leading-relaxed text-muted md:text-base"
+            >
+              Today, my focus is on building scalable, maintainable systems that feel effortless — for both users and developers. I design APIs as clear contracts, prioritize type safety across the stack, and build tooling that keeps frontend and backend reliably in sync.
+            </p>
+            <p
+              class="mt-3 text-sm leading-relaxed text-muted md:text-base"
+            >
+              Whether I&apos;m shipping a full-stack feature, refining system architecture, or improving developer experience, I approach every project with curiosity, care, and a mindset of continuous improvement.
+            </p>
+            <p class="mt-2 text-sm text-muted">
+              Focus areas:
+              <span class="font-medium text-text">
+                API architecture, OpenAPI-driven development, type-safe systems, developer experience (DX)
+              </span>
             </p>
             <p class="mt-3 text-sm text-muted">
               If you&apos;re looking for someone who can blend design, development, and 
