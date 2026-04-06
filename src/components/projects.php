@@ -23,10 +23,10 @@ $projects = [
   ],
   [
     'title' => 'International Gemological Alliance Website v2',
-    'description' => "<ul><li>Designed the client website using Figma.</li><li>Ongoing project</li></ul>",
+    'description' => "<ul><li>Designed the client website using Figma.</li><li>Ongoing project. Link share is Figma Prototype</li></ul>",
     'tools' => ['Figma'],
-    'link' => 'https://giifreight.net/',
-    'image' => '/src/images/projects/gii.png',
+    'link' => 'https://www.figma.com/proto/20uTuAU66CQixd4q1QXsKy/____i_G_a____by___J-m?node-id=0-1&t=NHnYqDuVWEraopoW-1',
+    'image' => '/src/images/projects/iga.png',
   ],
   [
     'title' => 'Converter',
