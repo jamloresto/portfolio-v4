@@ -26,7 +26,7 @@
 		const select = document.getElementById("theme-select");
 		const bar = document.getElementById("theme-selector");
 		const iconBase = (
-			bar?.dataset?.iconPath || "/src/images/logos"
+			bar?.dataset?.iconPath || "/src/images/theme-icons"
 		).replace(/\/+$/, "");
 
 		// ----- Logo bits
@@ -107,7 +107,7 @@
 				const img = document.createElement("img");
 				img.alt = label;
 				img.loading = "lazy";
-				img.src = `${iconBase}/${key}.png?v=1`;
+				img.src = `${iconBase}/${key}.svg?v=1`;
 
 				// graceful fallback if path/MIME fails
 				img.onerror = () => {
