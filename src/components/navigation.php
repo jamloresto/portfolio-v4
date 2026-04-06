@@ -95,7 +95,7 @@
     <!-- Theme selector -->
     <div
       id="theme-selector"
-      class="theme-selector ml-6 flex items-center gap-2 mt-auto md:mt-0"
+      class="theme-selector ml-6 flex items-center gap-2 mt-auto md:mt-0 text-accent-mono!"
       data-icon-path="/images/theme-icons"
     ></div>
   </div>

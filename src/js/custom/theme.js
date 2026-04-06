@@ -25,9 +25,6 @@
 		// theme controls (legacy select + new icon row)
 		const select = document.getElementById("theme-select");
 		const bar = document.getElementById("theme-selector");
-		const iconBase = (
-			bar?.dataset?.iconPath || "/src/images/theme-icons"
-		).replace(/\/+$/, "");
 
 		// ----- Logo bits
 		const logoEl = document.getElementById("brand-logo");
@@ -69,6 +66,18 @@
 			logoEl.classList.toggle("logo--on-dark", DARK_THEMES.has(theme));
 		};
 
+		const setToggleActive = (theme) => {
+			THEMES.forEach(({ key }) => {
+				const svg = document.getElementById(`theme-toggle-${key}`);
+				if (!svg) return;
+
+				const isActive = key === theme;
+
+				svg.classList.toggle("text-accent", isActive);
+				svg.classList.toggle("text-primary", !isActive);
+			});
+		}
+
 		// ----- Helpers
 		const clampTheme = (t) => (THEMES.some((x) => x.key === t) ? t : "winter");
 
@@ -79,15 +88,47 @@
 			localStorage.setItem("theme", theme);
 
 			// sync UI states
-			if (select) select.value = theme;
-			bar?.querySelectorAll(".theme-option").forEach((btn) => {
-				const active = btn.dataset.theme === theme;
-				btn.classList.toggle("active", active);
-				btn.setAttribute("aria-pressed", String(active));
+			bar?.querySelectorAll("button").forEach((btn) => {
+				const svg = btn.querySelector("svg");
+				if (!svg) return;
 			});
 
 			// update logo each time theme changes
 			setLogo(theme);
+			setToggleActive(theme);
+		};
+
+		const loadThemeIcon = async (key, label, emoji, btn) => {
+			try {
+				const res = await fetch(`/src/images/theme-icons/${key}.svg`);
+				if (!res.ok) throw new Error(`Failed to load ${key}.svg`);
+
+				const svgText = await res.text();
+
+				const wrapper = document.createElement("div");
+				wrapper.innerHTML = svgText.trim();
+
+				const svg = wrapper.querySelector("svg");
+				if (!svg) throw new Error("No <svg> found");
+
+				svg.setAttribute("aria-label", label);
+				svg.setAttribute("role", "img");
+				svg.id = `theme-toggle-${key}`
+
+				const theme = localStorage.getItem("theme") || "winter";
+
+				const isActive = key === theme;
+
+				svg.classList.toggle("text-accent", isActive);
+				svg.classList.toggle("text-primary", !isActive);
+
+				btn.appendChild(svg);
+			} catch (err) {
+				const span = document.createElement("span");
+				span.className = "fallback";
+				span.textContent = emoji;
+				btn.appendChild(span);
+			}
 		};
 
 		// ----- Build icon row if container exists
@@ -104,21 +145,8 @@
 				btn.setAttribute("aria-pressed", "false");
 				btn.title = label;
 
-				const img = document.createElement("img");
-				img.alt = label;
-				img.loading = "lazy";
-				img.src = `${iconBase}/${key}.svg?v=1`;
+				loadThemeIcon(key, label, emoji, btn);
 
-				// graceful fallback if path/MIME fails
-				img.onerror = () => {
-					img.remove();
-					const span = document.createElement("span");
-					span.className = "fallback";
-					span.textContent = emoji; // ❄️ 🌸 ☀️ 🍂 ⬛
-					btn.appendChild(span);
-				};
-
-				btn.appendChild(img);
 				bar.appendChild(btn);
 
 				const activate = () => applyTheme(key);
