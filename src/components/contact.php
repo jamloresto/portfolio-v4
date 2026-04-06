@@ -128,7 +128,7 @@
       Built using PHP, TailwindCSS, GSAP, and JavaScript.
     </p>
     <p class="mt-2 text-center text-xs text-on-primary/70">
-      JESSA MAE HERNANDEZ | 2025
+      JESSA MAE HERNANDEZ | © <span id="year"></span>
     </p>
   </div>
 </section>
