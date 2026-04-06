@@ -26,7 +26,7 @@
 		const select = document.getElementById("theme-select");
 		const bar = document.getElementById("theme-selector");
 		const iconBase = (
-			bar?.dataset?.iconPath || "/src/images/theme-icons"
+			bar?.dataset?.iconPath || "/src/images/logos"
 		).replace(/\/+$/, "");
 
 		// ----- Logo bits
