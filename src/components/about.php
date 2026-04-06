@@ -118,7 +118,7 @@
             <p class="mt-2 text-sm text-muted">
               Tech stack:
               <span class="font-medium text-text">
-                Node.js, Express.js, MySQL, MongoDB, MERN stack
+                Node.js, Express.js, MySQL, MongoDB, MERN stack, Laravel, PostgreSQL
               </span>
             </p>
             <p class="mt-2 text-sm text-muted">

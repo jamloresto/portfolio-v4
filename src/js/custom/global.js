@@ -86,6 +86,7 @@
 		Global.prototype.reloadOnPageResize();
 		Global.prototype.handleHeaderNavScroll();
 		Global.prototype.handleAnchorSmoothScroll();
+		Global.prototype.automaticYear();
 	};
 
 	Global.prototype.reloadOnPageResize = function () {
@@ -278,6 +279,17 @@
 				});
 			});
 		};
+	};
+
+	Global.prototype.automaticYear = function () {
+		const yearEl = document.getElementById("year");
+
+		function initializeYear() {
+			if (!yearEl) return;
+			yearEl.textContent = new Date().getFullYear();
+		}
+
+		initializeYear();
 	};
 
 	app.Global = Global;

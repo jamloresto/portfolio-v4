@@ -17,7 +17,14 @@ $projects = [
   [
     'title' => 'GII International WordPress Website',
     'description' => "<ul><li>Designed the client website using Figma.</li><li>Built custom UI sections and animations, ensuring consistent branding and smooth user experience.</li><li>Implemented SASS-based styling, optimized layouts, and improved page responsiveness across devices.</li><li>Enhanced performance through asset optimization, reusable components, and mobile usability improvements.</li><li>Integrated SEO-friendly structures and assisted with bug fixes and front-end performance tuning.</li></ul>",
-    'tools' => ['Wordpress', 'Custom Theme', 'TailwindCSS', 'Photoshop'],
+    'tools' => ['Wordpress', 'SASS', 'JavaScript', 'PHP', 'Advance Custom Fields', 'Site SEO', 'Figma', 'GSAP', 'Git'],
+    'link' => 'https://giifreight.net/',
+    'image' => '/src/images/projects/gii.png',
+  ],
+  [
+    'title' => 'International Gemological Alliance Website v2',
+    'description' => "<ul><li>Designed the client website using Figma.</li><li>Ongoing project</li></ul>",
+    'tools' => ['Figma'],
     'link' => 'https://giifreight.net/',
     'image' => '/src/images/projects/gii.png',
   ],
@@ -45,7 +52,7 @@ $projects = [
   [
     'title' => 'AU-based Clients Custom Theme WordPress Websites',
     'description' => "<p class='block md:hidden italic pb-2'>As the nature of this work is confidential, there won't be any visuals to show for the time being. However, a description of the work done may be provided.</p><ul><li>Built custom UI sections and animations, ensuring consistent branding and smooth user experience.</li><li>Implemented SASS-based styling, optimized layouts, and improved page responsiveness across devices.</li><li>Enhanced performance through asset optimization, reusable components, and mobile usability improvements.</li><li>Integrated SEO-friendly structures and assisted with bug fixes and front-end performance tuning.</li></ul>",
-    'tools' => ['Wordpress', 'Custom Theme', 'TailwindCSS', 'Photoshop'],
+    'tools' => ['Wordpress', 'Custom Theme', 'PHP', 'TailwindCSS', 'Photoshop'],
     'link' => '',
     'image' => '',
   ],
